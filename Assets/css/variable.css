@@ -1,0 +1,5 @@
+:root{
+    --gtc-layout: repeat(3,1fr);
+    --padding-layout: 90px;
+    --background-color-greenblue: #6FAB9E;
+}
