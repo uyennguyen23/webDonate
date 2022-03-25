@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>museum</title>
-    <link rel="stylesheet" href="../Assets/css/reset.css">
-    <link rel="stylesheet" href="../Assets/css/museumStyle.css">
+    <link rel="stylesheet" href="../../Assets/css/reset.css">
+    <link rel="stylesheet" href="../../Assets/css/museumStyle.css">
 </head>
 <body>
 <header class="u__background-color-greenblue">
@@ -71,5 +71,5 @@
     </div>
 </main>
 </body>
-<script src="../Assets/js/stories-js.js"></script>
+<script src="../../Assets/js/stories-js.js"></script>
 </html>
