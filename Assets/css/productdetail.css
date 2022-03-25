@@ -1,4 +1,5 @@
 :root {
+	--c--backgroundcoloer--footer:#b6a698;
 	--c--bacgroundcolor--ofitem: rgb(252, 252, 252);
 	--c--bacgroundcolo--btn--:black;
 	--c--bacgroundcolor--content:rgb(249 248 199);
@@ -132,6 +133,37 @@
     background-color: var(--c--bacgroundcolor--content);
     padding: 20px;
 }
+/* footer======================================= */
+.--c--fluit--footer{
+	padding: 30px 0;
+	width: 100%;
+	background-color: var(--c--backgroundcoloer--footer);
+}
+.--c--footer-{
+	width: 70%;
+	margin-top: 20px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 25% 30% 25% 20%;
+	text-align: left;
+}
+.--c--footer- h3{
+	text-transform:uppercase;
+	font-size: var(--c--fonsize--name--detail);
+	padding: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: white;
+
+}
+.--c--footer- p{
+	font-size: var(--c--fontsize--conten--reponsive);
+	padding: 10px;
+	font-weight: bold;
+	color: white;
+}
+/* mobille ========================================= */
+
 @media screen and (max-width: 768px){
 	.--c--container,.c--product--detail{
 		width: 100%;
@@ -165,10 +197,32 @@
 	.--c--btn {
 		padding: 10px;
 	}
+	.--c--footer-{
+		text-align: center;
+	grid-template-columns: 50% 50%;
+	}
+	.--c--footer- h3{
+		margin-top:30px;
+		font-size: var(--c--fontsize--name--reponsive);
+	}
+	.--c--footer- p{
+		font-size: var(--c--fontsize--conten--reponsive);
+	}
    
 }
 @media (min-width: 740px) and (max-width: 1023px) {
     .--c--container {
         width: 100%;
+		
     }
+	.--c--comment{
+		width: 100%;
+	}
+	.--c--footer-{
+		text-align: center;
+	grid-template-columns: 50% 50%;
+	}
+	.--c--footer- h3{
+		margin-top: 10px;
+	}
 }
