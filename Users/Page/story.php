@@ -60,16 +60,70 @@
     </div>
     <div class="container">
         <div class="u__third-elementor-wrap u__background-color-greenblue">
-            
-        </div>
-    </div>
-    <div class="container">
-        <div class="u__text-slider u__background-color-greenblue">
-            <div class="u__text-slider-run">
-                Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it
+            <div class="u__collection-slider">
+                <div class="u__collection-slider-title">
+                    abc
+                </div>
+                <div class="u__collection-slider-img">
+                    <img src="https://images.unsplash.com/photo-1529304344766-6b537de190f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHZpZXRuYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="u__collection-slider-des">
+                    Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it
+                </div>
+            </div>
+            <div class="u__collection-slider">
+                <div class="u__collection-slider-title">
+                    abc
+                </div>
+                <div class="u__collection-slider-img">
+                    <img src="https://images.unsplash.com/photo-1529304344766-6b537de190f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHZpZXRuYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="u__collection-slider-des">
+                    Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it
+                </div>
+            </div>
+            <div class="u__collection-slider">
+                <div class="u__collection-slider-title">
+                    abc
+                </div>
+                <div class="u__collection-slider-img">
+                    <img src="https://images.unsplash.com/photo-1529304344766-6b537de190f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHZpZXRuYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="u__collection-slider-des">
+                    Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it
+                </div>
+            </div>
+            <div class="u__collection-slider">
+                <div class="u__collection-slider-title">
+                    abc
+                </div>
+                <div class="u__collection-slider-img">
+                    <img src="https://images.unsplash.com/photo-1529304344766-6b537de190f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHZpZXRuYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="u__collection-slider-des">
+                    Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it
+                </div>
+            </div>
+            <div class="u__collection-slider">
+                <div class="u__collection-slider-title">
+                    abc
+                </div>
+                <div class="u__collection-slider-img">
+                    <img src="https://images.unsplash.com/photo-1529304344766-6b537de190f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHZpZXRuYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="u__collection-slider-des">
+                    Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it
+                </div>
             </div>
         </div>
     </div>
+<!--    <div class="container">-->
+<!--        <div class="u__text-slider u__background-color-greenblue">-->
+<!--            <div class="u__text-slider-run">-->
+<!--                Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </main>
 </body>
 <script src="../../Assets/js/stories-js.js"></script>
