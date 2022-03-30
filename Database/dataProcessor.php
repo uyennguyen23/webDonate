@@ -15,20 +15,45 @@
         }
 
         // Select data
-        function selectData($table, $condition) {
-            return "SELECT * FROM $table WHERE id = $condition";
+        function selectData($table, $whereCondition) {
+            foreach($whereCondition as $key => $value) {
+                $condition = $key . " = '" . $value . "' AND";
+            }
+            $condition = substr($condition, 0, -5);
+            $query = "SELECT * FROM ".$table." WHERE " . $condition;
+            $result = mysqli_query($this->_connection, $query);
+            if(!$result){
+                return NULL;
+            }
+            while($row = mysqli_fetch_assoc($result)) {
+                $array[] = $row;
+            }
+            mysqli_free_result($result);
+            return $array;
         }
 
         // Select a table
         function selectTable($table) {
-            return "SELECT * FROM $table";
+            $query = "SELECT * FROM ".$table."";
+            $result = mysqli_query($this->_connection, $query);
+            if(!$result){
+                return NULL;
+            }
+            while($row = mysqli_fetch_assoc($result)) {
+                $array[] = $row;
+            }
+            mysqli_free_result($result);
+            return $array;
         }
 
 
         // Insert data
-        // function insert($table, $data=[]) {
-        //     return "INSERT INTO $table values ($data)" 
-        // }
+        function insert($table, $data) {
+            $query = "INSERT INTO ".$table." (";
+            $query .= implode(",", array_keys($data)) .') VALUES (';
+            $query .= implode("','", array_values($data)) ."')";
+            return $query;
+        }
 
         // Update data
         function update($table, $data=[], $condition) {
@@ -40,13 +65,12 @@
             return "DELETE FROM $table WHERE id = $condition ";
         }
 
-        function getCategory($idPhoto) {
-            $photo = $this->getData(selectData($idPhoto));
-            
-        }
+        // function getCategory($idPhoto) {
+        //     $photo = $this->getData(selectData($idPhoto));
+        // }
 
         function renderData() {
-            $row = $this->getData($this->selectTable(products));
+            $row = $this->selectTable("products");
             if ($row <> 0) {
                 foreach ($row as $product) {
                     if ($product['image'] == null || $product['image'] == "") $product["image"] = '';
@@ -97,6 +121,12 @@
             return $this->getData("SELECT * FROM comment WHERE idPhoto = $idPhoto GROUP BY idPhoto");
         }
 
+        function addComment($idPhoto) {
+            // $data = new database();
+            $this->setQuery($this->insert("comment", $comment->castToArray()));
+            $this->query();
+        }
+
         function renderComment() {
             $listComment = $this->getComment(1);
             if($listComment <> 0) {
@@ -118,13 +148,9 @@
                     ';
                 }
             } else {
-                echo "Nothing to show";
-            }
-            
-            
-        }
-        
-        
+                echo "Nothing to show";   
+            }   
+        }   
     }
 
     $test = new dataProcessor;

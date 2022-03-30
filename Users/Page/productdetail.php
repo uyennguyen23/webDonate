@@ -1,3 +1,23 @@
+<?php
+
+    include "...../PHP/comment.php";
+    include "../PHP/creator.php";
+    include ".../Database/dataProcessor.php";
+
+    // $mainData = new dataProcessor();
+
+    if(isset($_POST['idPhoto'])) {
+        $idPhoto = $_POST['idPhoto'];
+        if(array_key_exists('submit', $_POST)) {
+            // $mainData->addAlbum($singerIndex, creator::createComment($idPhoto));
+            $mainData->addComment($idPhoto, creator::createComment($idPhoto));
+        }
+    }
+
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,11 +120,11 @@
                     <br>
                     <div class="--c--form--comment">
                         <form action="" method="POST">
-                            <textarea placeholder="Type your comment here."
+                            <textarea name="Newcomment" placeholder="Type your comment here."
                                 class="--c--comment"></textarea>
                             <br>
                             <input type="submit" class="--c--btn"
-                                name="sencomment" value="Post your comment">
+                                name="sendComment" value="Post your comment">
                         </form>
                     </div>
                 </div>
