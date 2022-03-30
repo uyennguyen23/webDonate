@@ -13,6 +13,15 @@
             $this->password = $password;
         }
 
+        function castToArray() {
+            return [
+                "idAccount" => $this->idAccount,
+                "idUser" => $this->idUser,
+                "accountName" => $this->accountName,
+                "password" => $this->password,
+            ]
+        }
+
         function getIdAccount(){
             return $this->idAccount;
         }
