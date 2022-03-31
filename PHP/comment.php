@@ -7,8 +7,8 @@
         private string $content;
         private string $dateTime;
 
-        public function __construct($idUser, $idPhoto, $content) {
-            $this->idComment = "";
+        public function __construct($idUser, $idPhoto, $content,$dateTime) {
+            $this->idComment = "10";
             $this->idUser = $idUser;
             $this->idPhoto = $idPhoto;
             $this->content = $content;

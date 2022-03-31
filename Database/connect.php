@@ -20,7 +20,6 @@
             if($db != "" && !mysqli_select_db($this->_connection, $db)) {
                 die("Can't open database");
             }
-            echo "DB Ok";
         }
 
         function setQuery($sql) {

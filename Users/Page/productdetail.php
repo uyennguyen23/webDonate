@@ -1,9 +1,8 @@
 <?php
 
-
+    include dirname(__DIR__)."/../Database/dataProcessor.php";
     include dirname(__DIR__)."/../PHP/creator.php";
     include dirname(__DIR__)."/../PHP/comment.php";
-    include dirname(__DIR__)."/../Database/dataProcessor.php";
 
 
     $mainData = new dataProcessor();
@@ -13,6 +12,7 @@
         $condition = ['idPhoto' => $idPhoto];
         if(isset($_POST['sendComment']))
         {
+            echo "SendComment";
             if(!empty($_POST['newComment'])){
                 $content = $_POST['newComment'];
                 if($content !== ""){
@@ -80,53 +80,6 @@
                 </div>
             </div>
 
-<<<<<<< HEAD
-                        <br>
-                        <hr>
-                    </div>
-                    <div class="--c--comment--content">
-                        <p class="--c--content--user">
-                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            <p class="--c--content--user" name="nameuser">congkpl</p>
-                            <p class="--c--conten--date" name="date">12/02/2021</p>
-                            <br>
-                            <br>
-                            <p class="--c--content--detail" name="content-user">Hang
-                                trung quoc</p>
-                        </p>
-
-                        <br>
-                        <hr>
-                    </div>
-                    <div class="--c--comment--content">
-                        <p class="--c--content--user">
-                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            <p class="--c--content--user" name="nameuser">thanhmillo</p>
-                            <p class="--c--conten--date" name="date">12/02/2021</p>
-                            <br>
-                            <br>
-                            <p class="--c--content--detail" name="content-user">Hang
-                                trung quoc</p>
-                        </p>
-
-                        <br>
-                        <hr>
-                    </div>
-
-                    <?php
-                        $mainData->renderComment(['idPhoto' => $idPhoto]);
-                    ?>
-                    <br>
-                    <div class="--c--form--comment">
-                        <form action="" method="POST">
-                            <textarea name="newComment" placeholder="Type your comment here."
-                                class="--c--comment"></textarea>
-                            <br>
-                            <input type="submit" class="--c--btn"
-                                name="sendComment" value="Post your comment">
-                        </form>
-                    </div>
-=======
         </div>
         <div class="--c--mytabs">
             <input type="radio" id="tabsilver" name="mytabs" checked="checked">
@@ -145,7 +98,6 @@
 
                     <br>
                     <hr>
->>>>>>> b34330ab261379eea1a86fa11ddbab70f5d95b5d
                 </div>
                 <div class="--c--comment--content">
                     <p class="--c--content--user">
@@ -175,6 +127,9 @@
                     <br>
                     <hr>
                 </div>
+                <?php
+                    $mainData->renderComment($condition);
+                ?>
                 <br>
                 <div class="--c--form--comment">
                     <form action="" method="POST">
