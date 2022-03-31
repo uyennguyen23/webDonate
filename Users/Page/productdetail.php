@@ -14,13 +14,14 @@
         {
             echo "SendComment";
             if(!empty($_POST['newComment'])){
+                echo "Not empty";
                 $content = $_POST['newComment'];
                 if($content !== ""){
-                    $mainData->addComment(1, creator::createComment(1));
+                    $mainData->addComment($idPhoto, creator::createComment($idPhoto));
                     echo "Comment Posted";
-                }else{
-                    echo "Write your comment";
                 }
+            }else{
+                echo "Write your comment";
             }
         }
         else{
@@ -133,7 +134,7 @@
                 <br>
                 <div class="--c--form--comment">
                     <form action="" method="POST">
-                        <textarea name="Newcomment" placeholder="Type your comment here."
+                        <textarea name="newComment" placeholder="Type your comment here."
                             class="--c--comment"></textarea>
                         <br>
                         <input type="submit" class="--c--btn" name="sendComment" value="Post your comment">
