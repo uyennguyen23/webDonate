@@ -1,17 +1,31 @@
 <?php
 
-    include "...../PHP/comment.php";
-    include "../PHP/creator.php";
-    include ".../Database/dataProcessor.php";
+    include dirname(__DIR__)."/../PHP/creator.php";
+    include dirname(__DIR__)."/../PHP/comment.php";
+    include dirname(__DIR__)."/../Database/dataProcessor.php";
 
-    // $mainData = new dataProcessor();
+    $mainData = new dataProcessor();
 
-    if(isset($_POST['idPhoto'])) {
-        $idPhoto = $_POST['idPhoto'];
-        if(array_key_exists('submit', $_POST)) {
-            // $mainData->addAlbum($singerIndex, creator::createComment($idPhoto));
-            $mainData->addComment($idPhoto, creator::createComment($idPhoto));
+    if(isset($_GET['idPhoto'])) {
+        $idPhoto = $_GET['idPhoto'];
+        $condition = ['idPhoto' => $idPhoto];
+        if(isset($_POST['sendComment']))
+        {
+            if(!empty($_POST['newComment'])){
+                $content = $_POST['newComment'];
+                if($content !== ""){
+                    $mainData->addComment(1, creator::createComment(1));
+                    echo "Comment Posted";
+                }else{
+                    echo "Write your comment";
+                }
+            }
         }
+        else{
+            echo "No thing";
+        }
+    } else{
+        echo "No idPhoto";
     }
 
     
@@ -117,10 +131,14 @@
                         <br>
                         <hr>
                     </div>
+
+                    <?php
+                        $mainData->renderComment(['idPhoto' => $idPhoto]);
+                    ?>
                     <br>
                     <div class="--c--form--comment">
                         <form action="" method="POST">
-                            <textarea name="Newcomment" placeholder="Type your comment here."
+                            <textarea name="newComment" placeholder="Type your comment here."
                                 class="--c--comment"></textarea>
                             <br>
                             <input type="submit" class="--c--btn"
@@ -215,7 +233,7 @@
                 </div>
                 <div class="--c--footer-one">
                     <h3>other links</h3>
-                    <p>Online store</p>
+                    <p>OnlinenderComment($photo)e store</p>
                     <p>Museum</p>
                     <p>Contact</p>
                 </div>

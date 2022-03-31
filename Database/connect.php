@@ -9,7 +9,7 @@
         var $_host = "localhost";
         var $_user = "root";
         var $_pass = "";
-        var $_database = "huy_db";
+        var $_database = "test_php_project";
 
         function __construct() {
             $this->_connection = @mysqli_connect($this->_host, $this->_user, $this->_pass);
@@ -20,6 +20,7 @@
             if($db != "" && !mysqli_select_db($this->_connection, $db)) {
                 die("Can't open database");
             }
+            echo "DB Ok";
         }
 
         function setQuery($sql) {
@@ -29,17 +30,6 @@
         function query() {
             $this->_cursor = mysqli_query($this->_connection, $this->_sql);
             return $this->_cursor;
-        }
-
-        function loadAllRow() {
-            if(!($cur = $this->query())) {
-                return null;
-            }
-            while($row = mysqli_fetch_assoc($cur)) {
-                $array[] = $row;
-            }
-            mysqli_free_result($cur);
-            return $array;
         }
 
         function disconnect() {

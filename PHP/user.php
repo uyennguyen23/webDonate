@@ -3,17 +3,30 @@
     class user{
         private string $idUser;
         private string $name;
+        private string $address;
         private string $phone;
         private string $email;
-        private string $address;
+        private string $password;
     }
 
-    function __construct($name, $phone, $email, $address){
-        $this->idUser = date("m-d-h-i-s-a");
+    function __construct($name, $phone, $email, $address, $password){
+        $this->idUser = "";
         $this->name = $name;
+        $this->address = $address;
         $this->phone = $phone;
         $this->email = $email;
-        $this->address = $address;
+        $this->password = $password;
+    }
+
+    function castToArray() {
+        return [
+            "idUser" => $this->idUser,
+            "name" => $this->name,
+            "address" => $this->address,
+            "phone" => $this->phone,
+            "email" => $this->email,
+            "password" => $this->password
+        ]
     }
 
 
@@ -64,6 +77,14 @@
     public function getAddress()
     {
         return $this->address;
+    }
+
+    function setPassword($password) {
+        $this->password = $password;
+    }
+
+    function getPassword() {
+        return $this->password;
     }
 
 ?>

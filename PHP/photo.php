@@ -3,45 +3,37 @@
     class photo{
         private string $idPhoto;
         private string $idCategory;
-        private string $namePhoto;
-        private string $description;
-        private float $price
+        private string $idPost;
+        private string $linkImage;
 
-        public function __construct($idCategory, $namePhoto, $price, $description){
+        public function __construct($idCategory, $idPost, $linkImage){
             $this->idPhoto = "";
             $this->idCategory = $idCategory;
-            $this->namePhoto = $namePhoto;
-            $this->price = $price;
-            $this->description = $description;
+            $this->idPost = $idPost;
+            $this->linkImage = $linkImage;
+        }
+
+        function castToArray() {
+            return [
+                "idPhoto" => $this->idPhoto,
+                "idCategory" => $this->idCategory,
+                "idPost" => $this->idPost,
+                "linkImage" => $this->linkImage
+            ]
         }
 
         public function getIdphoto() {
             return $this->idPhoto;
         }
 
-        public function setNamePhoto($namePhoto) {
-            $this->namePhoto = $namePhoto;
+        public function setLinkImage($linkImage) {
+            $this->linkImage = $linkImage;
         }
 
-        public function getNamePhoto() {
-            return $this->namePhoto;
+        public function getLinkImage() {
+            return $this->linkImage;
         }
 
-        public function setPrice($price) {
-            $this->price = $price;
-        }
-
-        public function getPrice() {
-            return $this->price;
-        }
-
-        public function setDescription($description) {
-            $this->description = $description;
-        }
-
-        public function getDescription() {
-            return $this->description;
-        }
     }
 
 ?>

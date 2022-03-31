@@ -3,12 +3,20 @@
     class like{
         private string $idLike;
         private string $idPhoto;
-        private string $idAccount;
+        private string $idUser;
 
-        public function __construct($idAccount, $idPhoto) {
+        public function __construct($idUser, $idPhoto) {
             $this->idLike = "";
-            $this->idAccount = $idAccount;
+            $this->idUser = $idUser;
             $this->idPhoto = $idPhoto;
+        }
+
+        function castToArray() {
+            return [
+                "idLike" => $this->idLike,
+                "idUser" => $this->idUser,
+                "idPhoto" => $this->idPhoto
+            ]
         }
 
         public function getIdLike() {
