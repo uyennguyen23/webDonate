@@ -20,8 +20,9 @@
 }
 .--c--container {
 	background-color: var(--c--backgroundcoloer--pages);
-font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif;
 	text-transform: capitalize;
+	padding-top: 20px;
 	font-size: var(--c--fonsize--content--detail);
 }
 .c--product--detail {
@@ -59,7 +60,7 @@ font-family: "Roboto", sans-serif;
 	height: 1px;
 }
 .c--margin--p-detail {
-	margin-top: 25px;
+	padding-top: 20px;
 	margin-bottom: 25px;
 }
 /* tab================================= */
@@ -82,12 +83,12 @@ font-family: "Roboto", sans-serif;
 	cursor: pointer;
 }
 .--c--mytabs .--c--tab {
+	font-family: "Roboto", sans-serif;
 	margin-right: 20px;
 	width: 100%;
 	padding: 20px;
 	/* background: var(--c--bacgroundcolor--ofitem); */
 	order: 1;
-	font-size: var(--c--fonsize--name--detail);
 	display: none;
 }
 
@@ -119,12 +120,14 @@ font-family: "Roboto", sans-serif;
 	justify-content: center;
 	outline: none;
 	cursor: pointer;
+	margin-top: 15px;
 }
 .--c--content--detail {
 	text-transform: none;
 	margin-left: 10px;
 }
 .--c--content--user {
+	font-size: var(--c--content-detail-);
 	float: left;
 	margin-left: 10px;
 }
@@ -161,7 +164,9 @@ font-family: "Roboto", sans-serif;
 	/* color: white; */
 }
 .--c--footer- p {
-	font-size: var(--c--fontsize--conten--reponsive);
+	font-family: "Roboto", sans-serif;
+	font-size: var(--c--fonsize--content--detail);
+;
 	padding: 10px;
 	font-weight: bold;
 	/* color: white; */
@@ -185,6 +190,9 @@ font-family: "Roboto", sans-serif;
 		width: 100%;
 		padding: 20px;
 		margin: 0 auto;
+	}
+	.c--content--product--detail label {
+		padding-top: 10px;
 	}
 	.c--img--product--detail img {
 		width: 100%;
