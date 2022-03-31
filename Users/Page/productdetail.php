@@ -2,7 +2,7 @@
 
     include "...../PHP/comment.php";
     include "../PHP/creator.php";
-    include ".../Database/dataProcessor.php";
+    include "../Database/dataProcessor.php";
 
     // $mainData = new dataProcessor();
 
