@@ -1,14 +1,10 @@
 <?php
 
-<<<<<<< HEAD
+
     include dirname(__DIR__)."/../PHP/creator.php";
     include dirname(__DIR__)."/../PHP/comment.php";
     include dirname(__DIR__)."/../Database/dataProcessor.php";
-=======
-    include "...../PHP/comment.php";
-    include "../PHP/creator.php";
-    include "../Database/dataProcessor.php";
->>>>>>> b34330ab261379eea1a86fa11ddbab70f5d95b5d
+
 
     $mainData = new dataProcessor();
 
@@ -189,37 +185,6 @@
                     </form>
                 </div>
             </div>
-<<<<<<< HEAD
-           
-        </div>
-        <div class="--c--fluit--footer">
-             <div class="--c--footer-">
-                <div class="--c--footer-one">
-                    <h3>the artist</h3>
-                    <p>Biography</p>
-                    <p>Behind the scenes</p>
-                    <p>News</p>
-                </div>
-                <div class="--c--footer-one">
-                    <h3>project</h3>
-                    <p>Portfolio</p>
-                    <p>projects</p>
-                    <p>Editorial</p>
-                </div>
-                <div class="--c--footer-one">
-                    <h3>galleries</h3>
-                    <p>Fine art Galleries in Hoi An</p>
-                    <p>Fine art Galleries in Sai Gon</p>
-                    
-                </div>
-                <div class="--c--footer-one">
-                    <h3>other links</h3>
-                    <p>OnlinenderComment($photo)e store</p>
-                    <p>Museum</p>
-                    <p>Contact</p>
-                </div>
-=======
->>>>>>> b34330ab261379eea1a86fa11ddbab70f5d95b5d
 
             <input type="radio" id="--c--tabfree" name="mytabs">
             <label for="--c--tabfree">All</label>
